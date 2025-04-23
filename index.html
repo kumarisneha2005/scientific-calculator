@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Scientific Calculator</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+<div class="container">
+    <h2>Scientific Calculator</h2>
+    <form method="post">
+        <input type="text" name="x" placeholder="Enter X" required>
+        <input type="text" name="y" placeholder="Enter Y (if needed)">
+        <select name="operation" required>
+            <option value="add">Add</option>
+            <option value="subtract">Subtract</option>
+            <option value="multiply">Multiply</option>
+            <option value="divide">Divide</option>
+            <option value="power">Power</option>
+            <option value="sqrt">Square Root (use X only)</option>
+            <option value="sin">Sine</option>
+            <option value="cos">Cosine</option>
+            <option value="tan">Tangent</option>
+            <option value="log">Logarithm</option>
+            <option value="exp">Exponential</option>
+        </select>
+        <button type="submit">Calculate</button>
+    </form>
+    {% if result is not none %}
+    <div class="result">Result: {{ result }}</div>
+    {% endif %}
+</div>
+</body>
+</html>
